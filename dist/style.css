@@ -1,0 +1,96 @@
+.serif {
+  font-family: "Libre Baskerville", serif;
+}
+
+body {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+}
+body #app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #202225;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+body #app #input {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+body #app #input input {
+  border: none;
+  background: none;
+  text-align: center;
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  background: #2f3136;
+  color: white;
+  outline: none;
+  box-shadow: inset 0 0 0px #565960;
+  transition: 0.25s -0.1s;
+  text-transform: uppercase;
+}
+body #app #input input:focus {
+  box-shadow: inset 0 0 2px #565960;
+}
+body #app #romannumerals {
+  display: flex;
+  font-size: 4rem;
+}
+body #app #romannumerals > div {
+  --color: white;
+  position: relative;
+  border: 2px solid var(--color);
+  padding: 0 0.5rem;
+  border-radius: 1rem;
+  margin: 0 0.25rem;
+  margin-bottom: 1rem;
+}
+body #app #romannumerals > div:nth-last-child(1) {
+  --color: #ffce54;
+}
+body #app #romannumerals > div:nth-last-child(2) {
+  --color: #2ecc71;
+}
+body #app #romannumerals > div:nth-last-child(3) {
+  --color: #5d9cec;
+}
+body #app #romannumerals > div:nth-last-child(4) {
+  --color: #ed5565;
+}
+body #app #romannumerals > div.error {
+  --color: #d8334a;
+}
+body #app #romannumerals > div[data-title] {
+  border-bottom-left-radius: 0;
+}
+body #app #romannumerals > div[data-title][data-title="0"] {
+  display: none;
+}
+body #app #romannumerals > div[data-title]:after {
+  content: attr(data-title);
+  position: absolute;
+  font-size: 1rem;
+  top: 100%;
+  left: -2px;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+  background: var(--color);
+  color: #202225;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+body #app #result {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+body #app #result:before {
+  content: "= ";
+}
